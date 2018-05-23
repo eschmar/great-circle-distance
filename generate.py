@@ -95,7 +95,7 @@ def run(args):
             for i in range(0, chunks):
                 x, y, key = getRandomCoords()
                 x2, y2, key2 = getRandomCoords()
-                mvalues += " (GeomFromText(\'POINT(%s %s)\'), GeomFromText(\'POINT(%s %s)\'))" % (str(x), str(y), str(x2), str(y2))
+                mvalues += " (GeomFromText(\'POINT(%s %s)\'), GeomFromText(\'POINT(%s %s)\'))" % (str(y), str(x), str(y2), str(x2))
                 pvalues += " ('(%s,%s)', '(%s,%s)')" % (str(x), str(y), str(x2), str(y2))
                 if i < chunks - 1:
                     mvalues += ','
