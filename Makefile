@@ -12,6 +12,6 @@ generate:
 	$(foreach size, \
 		$(SIZES), \
 		python3 generate.py -N $(size); \
-		mysql -u root temp < build/mysql.sql; \
+		mysql -u root geo < build/mysql.sql; \
 		psql -q -f build/postgres.sql; \
 	)
