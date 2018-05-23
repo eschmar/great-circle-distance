@@ -22,7 +22,7 @@ make
 -- MySQL
 SELECT (6378.137 * acos(cos(radians(ST_X(p1))) * cos(radians(ST_X(p2))) * cos(radians(ST_Y(p2)) - radians(ST_Y(p1))) + sin(radians(ST_X(p1))) * sin(radians(ST_X(p2))))) AS distance
 -- vs PostgreSQL
-SELECT (p1 <@> p2) * 1.609 AS distance
+SELECT (p1 <@> p2) * 1.609344 AS distance
 ```
 
 ## results

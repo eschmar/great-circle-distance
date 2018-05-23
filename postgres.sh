@@ -21,7 +21,9 @@ for samples in 100 500 1000 2500 5000 7500 10000 25000 50000 75000 100000 250000
 do
     printf "$samples "
     table="${base}_$(printf %07d $samples)"
-    query="SELECT (p1 <@> p2) * 1.609 AS distance FROM $table WHERE True;"
+
+    # Mile to km conversion. 25146/15625=1.609344.
+    query="SELECT (p1 <@> p2) * 1.609344 AS distance FROM $table WHERE True;"
 
     for (( i=1; i<=$trials; i++ ))
     do
