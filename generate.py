@@ -84,9 +84,9 @@ def run(args):
 
 
         # POSTGRES
-        postgres.write('DROP TABLE IF EXISTS `' + table + '`;\n')
+        postgres.write('DROP TABLE IF EXISTS ' + table + ';\n')
         postgres.write('CREATE TABLE "' + table + '" ("id" SERIAL, "p1" point, "p2" point, PRIMARY KEY ("id"));\n')
-        postgres.write('TRUNCATE TABLE `' + table + '`;\n\n')
+        postgres.write('TRUNCATE TABLE ' + table + ';\n\n')
 
         for j in range(0, int(sampleSize / chunks)):
             mvalues = ''
@@ -96,7 +96,7 @@ def run(args):
                 x, y, key = getRandomCoords()
                 x2, y2, key2 = getRandomCoords()
                 mvalues += " (GeomFromText(\'POINT(%s %s)\'), GeomFromText(\'POINT(%s %s)\'))" % (str(x), str(y), str(x2), str(y2))
-                pvalues += " ((%s,%s), (%s,%s))" % (str(x), str(y), str(x2), str(y2))
+                pvalues += " ('(%s,%s)', '(%s,%s)')" % (str(x), str(y), str(x2), str(y2))
                 if i < chunks - 1:
                     mvalues += ','
                     pvalues += ','
