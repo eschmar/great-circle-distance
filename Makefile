@@ -15,3 +15,9 @@ generate:
 		mysql -u root geo < build/mysql.sql; \
 		psql -q -f build/postgres.sql; \
 	)
+
+mysql:
+	./mysql.sh
+
+postgres:
+	./postgres.sh

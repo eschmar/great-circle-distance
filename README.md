@@ -9,6 +9,14 @@ create extension cube;
 create extension earthdistance;
 ```
 
+Make sure your MySQL server instance contains a `geo` table.
+
+```sh
+make
+./mysql.sh
+./postgres.sh
+```
+
 ## select statements
 ```sql
 -- MySQL
