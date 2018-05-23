@@ -72,8 +72,8 @@ def run(args):
     chunks=500
     if sampleSize < 500:
         chunks = 100
-    
-    table = "geo_" + str(sampleSize)
+
+    table = "geo_%07d" % sampleSize
 
     # Output
     with open(OUTPUT_FOLDER + '/mysql.sql', 'w') as mysql, open(OUTPUT_FOLDER + '/postgres.sql', 'w') as postgres:
