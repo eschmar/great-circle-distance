@@ -1,5 +1,5 @@
 # Great-circle distance
-MySQL vs PostgreSQL benchmarks
+MySQL vs PostgreSQL benchmarks. The system will generate tables containing test data. For that purpose, random points from areas within Sweden (see `data.geojson`) are chosen.
 
 ## setup
 PostgreSQL requires the `earthdistance` package.
