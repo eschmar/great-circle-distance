@@ -1,4 +1,4 @@
-# great-circle-distance
+# Great-circle distance
 MySQL vs PostgreSQL benchmarks
 
 ## setup
@@ -12,7 +12,10 @@ create extension earthdistance;
 Make sure your MySQL server instance contains a `geo` table.
 
 ```sh
+# Generate and fill database tables necessary for benchmarks
 make
+
+# Run benchmarks
 ./mysql.sh
 ./postgres.sh
 ```
