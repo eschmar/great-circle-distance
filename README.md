@@ -29,4 +29,6 @@ SELECT (p1 <@> p2) * 1.609344 AS distance
 ```
 
 ## results
-coming soon
+<img src="https://github.com/eschmar/great-circle-distance/raw/master/img/graph.png" alt="Benchmarks" style="max-width:100%;">
+
+The test bench was running an Intel(R) Xeon(R) Platinum 8168 CPU @ 2.70GHz.
